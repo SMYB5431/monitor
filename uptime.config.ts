@@ -38,7 +38,7 @@ const workerConfig: WorkerConfig = {
       name: 'Image',
       method: 'GET',
       target: 'https://img.sanmu.qzz.io/',
-      tooltip: 'image hosting service',
+      tooltip: 'Image hosting service',
       statusPageLink: 'https://img.sanmu.qzz.io/',
       expectedCodes: [200],
       timeout: 10000,
