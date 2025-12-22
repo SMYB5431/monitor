@@ -6,6 +6,7 @@ const pageConfig: PageConfig = {
   // Links shown at the header of your status page
   links: [
     { link: 'https://link.smyb.fun/', label: 'Link' },
+    { link: 'https://rss.smyb.fun/', label: 'Rss' },
     { link: 'https://img.smyb.fun/', label: 'Image' },
     { link: 'https://zmail.smyb.fun/', label: 'Email' },
     { link: 'https://blog.smyb.fun/', label: 'Blog', highlight: true },
@@ -62,6 +63,17 @@ const workerConfig: WorkerConfig = {
       target: 'https://link.smyb.fun/',
       tooltip: 'Short link',
       statusPageLink: 'https://link.smyb.fun/',
+      expectedCodes: [200],
+      timeout: 10000,
+    },
+    // Rss Monitor
+    {
+      id: 'rss_monitor',
+      name: 'Rss',
+      method: 'GET',
+      target: 'https://rss.smyb.fun/',
+      tooltip: 'Welcome to RSSHub',
+      statusPageLink: 'https://rss.smyb.fun/',
       expectedCodes: [200],
       timeout: 10000,
     },    
