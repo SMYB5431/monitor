@@ -24,13 +24,15 @@ export default function Header({ style }: { style?: React.CSSProperties }) {
     <header className={classes.header} style={style}>
       <Container size="md" className={classes.inner}>
         <div>
-          <Image
-            src={pageConfig.logo ?? '/logo.svg'}
-            h={56}
-            w={{ base: 140, sm: 190 }}
-            fit="contain"
-            alt="logo"
-          />
+          <a href="/">
+            <Image
+              src={pageConfig.logo ?? '/logo.svg'}
+              h={56}
+              w={{ base: 140, sm: 190 }}
+              fit="contain"
+              alt="logo"
+            />
+          </a>
         </div>
 
         <Group gap={5} visibleFrom="sm">
