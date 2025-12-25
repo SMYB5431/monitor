@@ -7,6 +7,7 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://link.smyb.fun/', label: 'Link' },
     { link: 'https://rss.smyb.fun/', label: 'Rss' },
+    { link: 'https://ip.smyb.de5.net/', label: 'IP' },
     { link: 'https://img.smyb.fun/', label: 'Image' },
     { link: 'https://zmail.smyb.fun/', label: 'Email' },
     { link: 'https://blog.smyb.fun/', label: 'Blog', highlight: true },
@@ -33,17 +34,6 @@ const workerConfig: WorkerConfig = {
       expectedCodes: [200],
       timeout: 10000,
     },
-    // Image Hosting Monitor
-    {
-      id: 'img_monitor',
-      name: 'Image',
-      method: 'GET',
-      target: 'https://img.sanmu.qzz.io/',
-      tooltip: 'Image hosting service',
-      statusPageLink: 'https://img.sanmu.qzz.io/',
-      expectedCodes: [200],
-      timeout: 10000,
-    },
     // Email Service Monitor
     {
       id: 'email_monitor',
@@ -54,18 +44,29 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://zmail.smyb.fun/',
       expectedCodes: [200],
       timeout: 10000,
-    },
-    // Link Monitor
+    },    
+    // Image Hosting Monitor
     {
-      id: 'link_monitor',
-      name: 'Link',
+      id: 'img_monitor',
+      name: 'Image',
       method: 'GET',
-      target: 'https://link.smyb.fun/',
-      tooltip: 'Short link',
-      statusPageLink: 'https://link.smyb.fun/',
+      target: 'https://img.smyb.fun/',
+      tooltip: 'Image hosting service',
+      statusPageLink: 'https://img.smyb.fun/',
       expectedCodes: [200],
       timeout: 10000,
     },
+    // IP Monitor
+    {
+      id: 'ip_monitor',
+      name: 'IP',
+      method: 'GET',
+      target: 'https://ip.smyb.de5.net/',
+      tooltip: 'IP Address',
+      statusPageLink: 'https://ip.smyb.de5.net/',
+      expectedCodes: [200],
+      timeout: 10000,
+    },    
     // Rss Monitor
     {
       id: 'rss_monitor',
@@ -74,6 +75,17 @@ const workerConfig: WorkerConfig = {
       target: 'https://rss.smyb.fun/',
       tooltip: 'Welcome to RSSHub',
       statusPageLink: 'https://rss.smyb.fun/',
+      expectedCodes: [200],
+      timeout: 10000,
+    },    
+    // Link Monitor
+    {
+      id: 'link_monitor',
+      name: 'Link',
+      method: 'GET',
+      target: 'https://link.smyb.fun/',
+      tooltip: 'Short link',
+      statusPageLink: 'https://link.smyb.fun/',
       expectedCodes: [200],
       timeout: 10000,
     },    
