@@ -7,6 +7,7 @@ const pageConfig: PageConfig = {
   links: [
     { link: 'https://link.smyb.fun/', label: 'Link' },
     { link: 'https://rss.smyb.fun/', label: 'Rss' },
+    { link: 'https://umami.smyb.fun/', label: 'Umami' },
     { link: 'https://ip.smyb.de5.net/', label: 'IP' },
     { link: 'https://img.smyb.fun/', label: 'Image' },
     { link: 'https://zmail.smyb.fun/', label: 'Email' },
@@ -66,7 +67,18 @@ const workerConfig: WorkerConfig = {
       statusPageLink: 'https://ip.smyb.de5.net/',
       expectedCodes: [200],
       timeout: 10000,
-    },    
+    },
+    // Umami Monitor
+    {
+      id: 'umami_monitor',
+      name: 'Umami',
+      method: 'GET',
+      target: 'https://umami.smyb.fun/',
+      tooltip: 'Website Analytics',
+      statusPageLink: 'https://umami.smyb.fun/',
+      expectedCodes: [200],
+      timeout: 10000,
+    },     
     // Rss Monitor
     {
       id: 'rss_monitor',
