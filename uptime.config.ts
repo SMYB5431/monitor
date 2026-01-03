@@ -9,6 +9,7 @@ const pageConfig: PageConfig = {
     { link: 'https://rss.smyb.fun/', label: 'Rss' },
     { link: 'https://umami.smyb.fun/', label: 'Umami' },
     { link: 'https://ip.smyb.de5.net/', label: 'IP' },
+    { link: 'https://news.smyb.fun/', label: 'News' },
     { link: 'https://img.smyb.fun/', label: 'Image' },
     { link: 'https://zmail.smyb.fun/', label: 'Email' },
     { link: 'https://blog.smyb.fun/', label: 'Blog', highlight: true },
@@ -57,6 +58,17 @@ const workerConfig: WorkerConfig = {
       expectedCodes: [200],
       timeout: 10000,
     },
+    // News Monitor
+    {
+      id: 'news_monitor',
+      name: 'News',
+      method: 'GET',
+      target: 'https://news.smyb.fun/',
+      tooltip: 'Cryptocurrency News',
+      statusPageLink: 'https://news.smyb.fun/',
+      expectedCodes: [200],
+      timeout: 10000,
+    },    
     // IP Monitor
     {
       id: 'ip_monitor',
